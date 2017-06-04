@@ -1,0 +1,31 @@
+#Boundary {
+	fill-color: #F3F1EF;
+};
+
+#GrassLand {
+	fill-color: #B5D19C;
+};
+
+#Roads--outer {
+	stroke-color: #BBB3B3;
+    stroke-thickness: 5px;
+};
+
+#Roads--inner {
+	stroke-color: #FFFFFF;
+    stroke-thickness: 3px;
+};
+
+#Streets--outer {
+	stroke-color: #BBB3B3;
+    stroke-thickness: 5px;
+};
+
+#Streets--inner {
+	stroke-color: #FFFFFF;
+    stroke-thickness: 3px;
+};
+
+#Water {
+	fill-color: #B9CFEB;
+};
