@@ -20,13 +20,13 @@ namespace AltitudeFillDemo_Wpf
         private AltitudeFillStyle altitudeFillStyle;
 
         private readonly int[] altitudeArray = new[] { 20, 30, 40, 50 };
-        private readonly int[] degreeArray = new[] { 0, 45, 90, 135, 180, 225, 270, 315 };
+        private readonly int[] directionArray = new[] { 0, 45, 90, 135, 180, 225, 270, 315 };
 
         public MainWindow()
         {
             InitializeComponent();
             altitudeComboBox.ItemsSource = altitudeArray;
-            degreeComboBox.ItemsSource = degreeArray;
+            directionComboBox.ItemsSource = directionArray;
         }
 
         private void MapControl_Loaded(object sender, RoutedEventArgs e)
@@ -55,21 +55,21 @@ namespace AltitudeFillDemo_Wpf
             mapControl.CurrentBound = new GeoBound(11586390.5663, 3584893.2152, 11586849.1885, 3585104.8502);
             mapControl.Refresh();
 
-            degreeComboBox.SelectedIndex = 2;
+            directionComboBox.SelectedIndex = 2;
             altitudeComboBox.SelectedIndex = 0;
         }
 
         private async void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (altitudeComboBox.SelectedValue == null || degreeComboBox.SelectedValue == null) return;
+            if (altitudeComboBox.SelectedValue == null || directionComboBox.SelectedValue == null) return;
 
-            degreeComboBox.IsEnabled = false;
+            directionComboBox.IsEnabled = false;
             altitudeComboBox.IsEnabled = false;
-            int degreeValue = (int)degreeComboBox.SelectedValue;
+            int directionValue = (int)directionComboBox.SelectedValue;
             int altitudeValue = (int)altitudeComboBox.SelectedValue;
 
 
-            altitudeFillStyle.AltitudeDirection = degreeValue;
+            altitudeFillStyle.AltitudeDirection = directionValue;
             if (altitudeValue != 0)
             {
                 float refreshCount = 20;
@@ -85,7 +85,7 @@ namespace AltitudeFillDemo_Wpf
                     await Task.Run(() => Thread.Sleep(16));
                 }
             }
-            degreeComboBox.IsEnabled = true;
+            directionComboBox.IsEnabled = true;
             altitudeComboBox.IsEnabled = true;
         }
     }

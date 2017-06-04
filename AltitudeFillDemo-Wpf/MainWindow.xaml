@@ -32,8 +32,8 @@
                 <ComboBox Grid.Row="0" Grid.Column="1" x:Name="altitudeComboBox" SelectionChanged="ComboBox_SelectionChanged" />
                 <TextBlock Grid.Row="0" Grid.Column="2" Text=" m" VerticalAlignment="Center"/>
 
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Degree : " VerticalAlignment="Center"/>
-                <ComboBox Grid.Row="2" Grid.Column="1" x:Name="degreeComboBox" SelectionChanged="ComboBox_SelectionChanged"/>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Direction : " VerticalAlignment="Center"/>
+                <ComboBox Grid.Row="2" Grid.Column="1" x:Name="directionComboBox" SelectionChanged="ComboBox_SelectionChanged"/>
                 <TextBlock Grid.Row="2" Grid.Column="2" Text=" °" VerticalAlignment="Center"/>
             </Grid>
         </GroupBox>
