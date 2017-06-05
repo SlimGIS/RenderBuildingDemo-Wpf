@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace AltitudeFillDemo_Wpf
+namespace SlimGIS.MapKit.Samples.RenderBuildingDemo
 {
     /// <summary>
     /// Interaction logic for App.xaml

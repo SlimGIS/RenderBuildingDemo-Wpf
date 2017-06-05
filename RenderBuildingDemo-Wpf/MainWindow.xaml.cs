@@ -1,14 +1,11 @@
-﻿using SlimGis.MapKit.Controls;
-using SlimGis.MapKit.Geometries;
+﻿using SlimGis.MapKit.Geometries;
 using SlimGis.MapKit.Layers;
 using SlimGis.MapKit.Symbologies;
 using SlimGis.MapKit.Wpf;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace AltitudeFillDemo_Wpf
+namespace SlimGIS.MapKit.Samples.RenderBuildingDemo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -39,7 +36,6 @@ namespace AltitudeFillDemo_Wpf
             mapControl.Overlays.Add(baseOverlay);
 
             buildingOverlay = new LayerOverlay();
-            buildingOverlay.TileMode = TileMode.SingleTile;
             altitudeFillStyle = new AltitudeFillStyle(GeoColor.FromHtml("#E6E1DF"), GeoColor.FromHtml("#80D3CDCA"), 1);
             altitudeFillStyle.AltitudeUnit = LengthUnit.Meter;
 
@@ -62,31 +58,9 @@ namespace AltitudeFillDemo_Wpf
         private async void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (altitudeComboBox.SelectedValue == null || directionComboBox.SelectedValue == null) return;
-
-            directionComboBox.IsEnabled = false;
-            altitudeComboBox.IsEnabled = false;
-            int directionValue = (int)directionComboBox.SelectedValue;
-            int altitudeValue = (int)altitudeComboBox.SelectedValue;
-
-
-            altitudeFillStyle.AltitudeDirection = directionValue;
-            if (altitudeValue != 0)
-            {
-                float refreshCount = 20;
-                altitudeFillStyle.Altitude = 0;
-                float step = altitudeValue / refreshCount;
-                for (int i = 0; i <= refreshCount; i++)
-                {
-                    await Task.Factory.StartNew(() =>
-                    {
-                        altitudeFillStyle.Altitude += step;
-                    });
-                    buildingOverlay.Refresh();
-                    await Task.Run(() => Thread.Sleep(16));
-                }
-            }
-            directionComboBox.IsEnabled = true;
-            altitudeComboBox.IsEnabled = true;
+            altitudeFillStyle.AltitudeDirection = (int)directionComboBox.SelectedValue;
+            altitudeFillStyle.Altitude = (int)altitudeComboBox.SelectedValue;
+            buildingOverlay.Refresh();
         }
     }
 }
