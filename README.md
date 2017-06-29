@@ -8,7 +8,7 @@ __Two and a half dimensional__ (shortened to 2.5D, known alternatively as three-
 
 In some GIS apps, we want to embed a building block in it which will looks different from the flat map and feel fansion. See the following screenshot.
 
-![2.5D building map](https://github.com/SlimGIS/RenderBuildingDemo-Wpf/raw/master/Previews/building-map-wpf.jpg)
+![2.5D building map](https://github.com/SlimGIS/RenderBuildingDemo-Wpf/raw/master/Previews/building-map-wpf.jpg?raw=true)
 
 Now let's see how we implement it.
 
