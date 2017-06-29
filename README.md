@@ -37,6 +37,7 @@ The rest thing is adding the building to your map. Please check the source code 
 
 ## Related Resource
 - [Source code](https://github.com/SlimGIS/RenderBuildingDemo-Wpf)
+- [Get executable](https://github.com/SlimGIS/RenderBuildingDemo-Wpf/releases)
 - [Map Kit WPF](https://slimgis.com/products/wpf)
 - [Map Kit Styles](https://slimgis.com/documents/styles)
 
