@@ -1,6 +1,6 @@
-Keywords: 2.5d building map, buildings on map, classic 2.5d buildings
+Keywords: 2.5d buildings, buildings on map
 
-# Add buildings on map
+# Create 2.5D buildings on map
 
 This page represents how to render 2.5D buildings with feature layer on SlimGIS WPF map control. 
 
