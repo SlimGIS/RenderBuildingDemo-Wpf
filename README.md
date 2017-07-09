@@ -2,9 +2,9 @@ Keywords: 2.5d buildings, buildings on map
 
 # Create 2.5D buildings on map
 
-This page represents how to render 2.5D buildings with feature layer on SlimGIS WPF map control. 
+<desc>Two and a half dimensional (shortened to 2.5D, known alternatively as three-quarter perspective and pseudo-3D) is a term used to describe either 2D graphical projections and similar techniques used to cause images or scenes to simulate the appearance of being three-dimensional (3D) when in fact they are not true 3D.</desc> 
 
-__Two and a half dimensional__ (shortened to 2.5D, known alternatively as three-quarter perspective and pseudo-3D) is a term used to describe either 2D graphical projections and similar techniques used to cause images or scenes to simulate the appearance of being three-dimensional (3D) when in fact they are not true 3D.
+This guide represents how to render 2.5D buildings with feature layer on SlimGIS WPF map control. 
 
 In some GIS apps, we want to embed a building block in it which will looks different from the flat map and feel fansion. See the following screenshot.
 
